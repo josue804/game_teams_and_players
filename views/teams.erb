@@ -16,6 +16,6 @@
 
 <ul>
   <% @teams.each do |team| %>
-    <li><a href="/team/<%= team.id %>"><%= team.name() %> | <%= team.size %></a></li>
+    <li><a name='team' href="/team/<%= team.id %>"><%= team.name() %> | <%= team.size %></a></li>
   <% end %>
 </ul>

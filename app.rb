@@ -26,6 +26,14 @@ end
 
 get('/team/:id') do
   @team = Team.find(params['id'].to_i)
-  @players = Player.all()
+  @players = @team.players
+  erb(:players)
+end
+
+post('/team/:id') do
+  @team = Team.find(params['id'].to_i)
+  name = params['name']
+  Player.create({:name => name, :team_id => @team.id})
+  @players = @team.players
   erb(:players)
 end

@@ -6,6 +6,16 @@
     <label for="name">Player Name</label>
     <input type="text" class="form-control" name="name" placeholder="e.g. Sammy the Smasher">
   </div>
+<div class="form-group">
+  <label for='position'>Position</label>
+  <input type="text" name="position" placeholder='e.g. smasher' class = 'form-control'>
 
+</div>
   <button type="submit" class="btn btn-default btn-md">Submit</button>
 </form>
+
+<ul>
+  <% @players.each do |player| %>
+    <li><%= player.name() %></li>
+  <% end %>
+</ul>
