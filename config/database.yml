@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: squirrel_shooter_development
+
+test:
+  adapter: postgresql
+  database: squirrel_shooter_test
