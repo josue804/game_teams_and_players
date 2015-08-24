@@ -1,8 +1,10 @@
 ENV['RACK_ENV'] = 'test'
 
 require('sinatra/activerecord')
-require('player')
-require('team')
+require 'rspec'
+require 'pg'
+require('./lib/player')
+require('./lib/team')
 
 
 RSpec.configure do |config|

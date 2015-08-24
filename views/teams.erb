@@ -1,0 +1,21 @@
+<h1>Teams</h1>
+
+<form action="/teams" method="post">
+  <div class="form-group">
+    <label for="name">Team Name</label>
+    <input type="text" class="form-control" name="name" placeholder="e.g. Rodent Rage">
+  </div>
+
+  <div class="form-group">
+    <label for="size">Team Size</label>
+    <input type="number" class="form-control" name="size" placeholder="e.g. 8">
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-md">Submit</button>
+</form>
+
+<ul>
+  <% @teams.each do |team| %>
+    <li><a href="/team/<%= team.id %>"><%= team.name() %> | <%= team.size %></a></li>
+  <% end %>
+</ul>
